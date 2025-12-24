@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.7 on win32)" generated="2025-12-24T18:48:20.531234" rpa="false" schemaversion="5">
+<suite id="s1" name="ToDoList" source="C:\Users\BELL\Test-BluePi\ToDoList.robot">
+<test id="s1-t1" name="TC07 Verify Completed Item" line="99">
+<kw name="Open To Do List Website" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-12-24T18:48:21.113587" level="INFO">Opening browser 'Chrome' to base url 'https://abhigyank.github.io/To-Do-List/'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-12-24T18:48:21.113357" elapsed="5.726708"/>
+</kw>
+<status status="PASS" start="2025-12-24T18:48:21.112715" elapsed="5.727542"/>
+</kw>
+<kw name="Input Tasks">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-24T18:48:26.841440" level="INFO">Typing text 'ต้องส่งงานให้หัวหน้าตรวจสอบ ก่อนส่งให้ลูกค้า' into text field 'id=new-task'.</msg>
+<arg>${Input_Item}</arg>
+<arg>${Input_Task}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-24T18:48:26.841064" elapsed="0.220024"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-12-24T18:48:29.061927" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-12-24T18:48:27.061320" elapsed="2.000728"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-24T18:48:29.062450" level="INFO">Clicking element '//button'.</msg>
+<arg>${Add_BT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-24T18:48:29.062222" elapsed="0.075558"/>
+</kw>
+<arg>ต้องส่งงานให้หัวหน้าตรวจสอบ ก่อนส่งให้ลูกค้า</arg>
+<status status="PASS" start="2025-12-24T18:48:26.840708" elapsed="2.297220"/>
+</kw>
+<kw name="TO-DO TASKS Tab">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-24T18:48:29.139025" level="INFO">Clicking element '//*[@class='mdl-tabs__tab']'.</msg>
+<arg>${ToDoTasks_Tab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-24T18:48:29.138680" elapsed="0.095031"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Checkbok}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-24T18:48:29.233929" elapsed="0.042423"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-12-24T18:48:34.277622" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-12-24T18:48:29.276692" elapsed="5.001035"/>
+</kw>
+<status status="PASS" start="2025-12-24T18:48:29.138386" elapsed="5.139429"/>
+</kw>
+<kw name="Check Checkbox">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-24T18:48:34.278864" level="INFO">Clicking element '//*[@class='mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center']'.</msg>
+<arg>${Checkbok}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-24T18:48:34.278713" elapsed="0.083267"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-12-24T18:48:36.362776" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-12-24T18:48:34.362159" elapsed="2.000843"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-24T18:48:36.363810" level="INFO">Clicking element '//*[@class='mdl-tabs__tab is-active']/following-sibling::a'.</msg>
+<arg>${Completed_Tab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-24T18:48:36.363367" elapsed="0.125796"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Completed_Result}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-24T18:48:36.489481" elapsed="0.033797"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-12-24T18:48:38.524519" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-12-24T18:48:36.523705" elapsed="2.000919"/>
+</kw>
+<status status="PASS" start="2025-12-24T18:48:34.278480" elapsed="4.246236"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-12-24T18:48:38.562878" level="INFO">Current page contains text 'ต้องส่งงานให้หัวหน้าตรวจสอบ ก่อนส่งให้ลูกค้า'.</msg>
+<arg>ต้องส่งงานให้หัวหน้าตรวจสอบ ก่อนส่งให้ลูกค้า</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-12-24T18:48:38.525144" elapsed="0.037845"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-12-24T18:48:38.563442" elapsed="2.232082"/>
+</kw>
+<tag>Completed</tag>
+<status status="PASS" start="2025-12-24T18:48:21.111901" elapsed="19.684686"/>
+</test>
+<test id="s1-t2" name="TC08 Verify Delete button in COMPLETED tab" line="108">
+<kw name="Open To Do List Website" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-12-24T18:48:44.833469" level="INFO">Opening browser 'Chrome' to base url 'https://abhigyank.github.io/To-Do-List/'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-12-24T18:48:40.797981" elapsed="9.274050"/>
+</kw>
+<status status="PASS" start="2025-12-24T18:48:40.797763" elapsed="9.274397"/>
+</kw>
+<kw name="Input Tasks">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-24T18:48:50.073951" level="INFO">Typing text 'ขอรายละเอียดลูกค้าจากฝ่ายขาย' into text field 'id=new-task'.</msg>
+<arg>${Input_Item}</arg>
+<arg>${Input_Task}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-24T18:48:50.073637" elapsed="0.192176"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-12-24T18:48:52.266769" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-12-24T18:48:50.266019" elapsed="2.000868"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-24T18:48:52.267252" level="INFO">Clicking element '//button'.</msg>
+<arg>${Add_BT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-24T18:48:52.267046" elapsed="0.073094"/>
+</kw>
+<arg>ขอรายละเอียดลูกค้าจากฝ่ายขาย</arg>
+<status status="PASS" start="2025-12-24T18:48:50.072997" elapsed="2.267403"/>
+</kw>
+<kw name="TO-DO TASKS Tab">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-24T18:48:52.341245" level="INFO">Clicking element '//*[@class='mdl-tabs__tab']'.</msg>
+<arg>${ToDoTasks_Tab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-24T18:48:52.341064" elapsed="0.087124"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Checkbok}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-24T18:48:52.428556" elapsed="0.029701"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-12-24T18:48:57.458985" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-12-24T18:48:52.458468" elapsed="5.000828"/>
+</kw>
+<status status="PASS" start="2025-12-24T18:48:52.340795" elapsed="5.118604"/>
+</kw>
+<kw name="Check Checkbox">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-24T18:48:57.460590" level="INFO">Clicking element '//*[@class='mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center']'.</msg>
+<arg>${Checkbok}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-24T18:48:57.460432" elapsed="0.050727"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-12-24T18:48:59.511794" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-12-24T18:48:57.511348" elapsed="2.000632"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-24T18:48:59.512678" level="INFO">Clicking element '//*[@class='mdl-tabs__tab is-active']/following-sibling::a'.</msg>
+<arg>${Completed_Tab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-24T18:48:59.512270" elapsed="0.091614"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Completed_Result}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-24T18:48:59.604086" elapsed="0.026185"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-12-24T18:49:01.631652" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-12-24T18:48:59.630520" elapsed="2.001247"/>
+</kw>
+<status status="PASS" start="2025-12-24T18:48:57.460201" elapsed="4.171665"/>
+</kw>
+<kw name="Delete Completed Task">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Delete_BT_Completed}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-24T18:49:01.632471" elapsed="0.014934"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-24T18:49:01.647910" level="INFO">Clicking element '(//button[contains(@class,'delete')])[last()]'.</msg>
+<arg>${Delete_BT_Completed}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-24T18:49:01.647656" elapsed="0.046471"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-12-24T18:49:03.694754" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-12-24T18:49:01.694314" elapsed="2.000546"/>
+</kw>
+<status status="PASS" start="2025-12-24T18:49:01.632218" elapsed="2.062729"/>
+</kw>
+<kw name="Page Should Not Contain" owner="SeleniumLibrary">
+<msg time="2025-12-24T18:49:03.717229" level="INFO">Current page does not contain text 'ขอรายละเอียดลูกค้าจากฝ่ายขาย'.</msg>
+<arg>ขอรายละเอียดลูกค้าจากฝ่ายขาย</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<status status="PASS" start="2025-12-24T18:49:03.695430" elapsed="0.021881"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-12-24T18:49:03.717733" elapsed="2.203408"/>
+</kw>
+<tag>Completed</tag>
+<status status="PASS" start="2025-12-24T18:48:40.797423" elapsed="25.123945"/>
+</test>
+<status status="PASS" start="2025-12-24T18:48:20.532743" elapsed="45.389478"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0" skip="0">Completed</stat>
+</tag>
+<suite>
+<stat name="ToDoList" id="s1" pass="2" fail="0" skip="0">ToDoList</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
