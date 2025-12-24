@@ -32,7 +32,7 @@ All test cases were executed successfully with **100% pass rate**.
 - **Python**
 - **Chrome Browser/ChromeDriver**
 
----------------------------------
+----------------------------------------------
 
 ## Execute test
 - robot  ToDoList.robot
@@ -43,4 +43,4 @@ All test cases were executed successfully with **100% pass rate**.
 - robot -i Completed  ToDoList.robot
 - robot -i E2E  ToDoList.robot 
 
-------------------------------------
+---------------------------------------------
