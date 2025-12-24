@@ -1,7 +1,7 @@
 # QA-Challenge
 No.2 Automation Testing Script - TO-DO LIST
 
-# To-Do List Automation Testing
+## To-Do List Automation Testing
 **Robot Framework + SeleniumLibrary**
 
 ----------------------------------------------
